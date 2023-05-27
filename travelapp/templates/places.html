@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+ 
+   <div class="row">
+    {% for place in places %}
+      <div class="col-md-4">
+        <div class="card"style="width:400px ;">
+          <img class="card-img-top" src="{{ place.img.url }}" class="d-block w-100" width="200"height="150">
+            <div class="card-body">
+              <h5 class="card-title">{{place.place}}</h5>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="book" id="checkbox2">
+                <label class="form-check-label" for="checkbox2">
+                  Select
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    </body>
+    </html>

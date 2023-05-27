@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link href="{% static 'travel app/css/profile.css' %}"rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+    <div class="wrapper wrapper--w680">
+        <div class="card card-4">
+            <div class="card-body">
+                <h2 class="title">User profile</h2>
+                <form method="POST">
+        {% csrf_token %}
+
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">username</label>
+                                <input class="input--style-4" type="text" name="user" value="{{ user.username }}" readonly required>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">First_name</label>
+                         <input class="input--style-4" type="text" name="first_name"value="{{user.first_name}}" readonly required>
+
+                            </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group">
+                              <label class="label">Last_Name</label>
+                             <input class="input--style-4" type="text" name="last_name"value="{{ user.last_name }}" readonly required>
+
+                          </div>
+                          </div>
+                          <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Email</label>
+                         <input class="input--style-4" type="text" name="email"value={{user.email}} readonly required>
+  
+                            </div>
+                            </div>
+                 
+               
+                          </div>
+                    <div class="p-t-15">
+                      <a href="{%url 'travelapp:update_profile'%}" class="btn btn--radius-2 btn--blue" type="submit">update</a>
+                    </div>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jquery JS-->
+<script src="{% static 'travel app/vendor/jquery/jquery.min.js' %}"></script>
+<!-- Vendor JS-->
+<script src="{% static 'travel app/vendor/select2/select2.min.js' %}"></script>
+<script src="{% static 'travel app/vendor/datepicker/moment.min.js' %}"></script>
+<script src="{% static 'travel app/vendor/datepicker/daterangepicker.js' %}"></script>
+
+<!-- Main JS-->
+<script src="{% static 'travel app/js/global.js' %}" ></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

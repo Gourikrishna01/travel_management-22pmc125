@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travello</title>
+  <link href="{% static 'travel app/css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+   </head>
+
+   <body>
+     <nav class="navbar navbar-expand-lg bg-succsess">
+       <div class="container-fluid">
+         <a class="navbar-brand" href="{% url 'travelapp:index' %}">TRAVELLO</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="{% url 'travelapp:index' %}">Home</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">blog</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link "href="#">book</a>
+             </li>
+             <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 profile
+               </a>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="{% url 'travelapp:signin' %}">>login</a></li>
+                 <li><a class="dropdown-item" href="{% url 'travelapp:signup' %}">signup</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                 <li><a class="dropdown-item" href="#">customer support</a></li>
+               </ul>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link "href="{% url 'travelapp:about' %}">about</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link "href="{% url 'travelapp:contact' %}">contact</a>
+             </li>
+             
+           </ul>
+           <form class="d-flex" role="search">
+             <input class="form-control me-2" type="search" placeholder="Enter Your Budget" aria-label="Search">
+             <button class="btn btn-outline-success" type="submit">Search</button>
+           </form>
+         </div>
+       </div>
+     </nav><hr>
+     <div class="container">
+     <h1 class="text-uppercase">about our travello</h1>
+     <p class="font-weight-normal">The tourism and travel industry has become more accessible than ever. The internet has made it easier to research, plan and book trips, all with just a few clicks. You can find everything from flights, hotels, and restaurants to car rentals and local experiences online. 
+
+
+      A tourism or travel website serves as an information hub for prospective travelers planning a getaway. Today, people travel for a range of experiences—babymoons, staycations, voluntourism or bleisure—you name it. So, provide as much relevant information as possible to help users plan their trips.
+      
+      </p>
+   </div>
+
+   <div class="container-fluid bg-danger text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+      <div class="row pt-5">
+          <div class="col-lg-3 col-md-6 mb-5">
+              <a href="" class="navbar-brand">
+                  <h1 class="text-primary"><span class="text-white">TRAVE</span>llo</h1>
+              </a>
+              <p>Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore rebum lorem ipsum dolor. No sed vero lorem dolor dolor</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+              <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+              <div class="d-flex flex-column justify-content-start">
+                  <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                  <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
+                  <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+              <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
+              <div class="d-flex flex-column justify-content-start">
+                  <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                  <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>packages</a>
+                 
+                  <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+              </div>
+    </div>
+    
+    <!-- Footer End -->
+    
+    
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+    
+    </html>

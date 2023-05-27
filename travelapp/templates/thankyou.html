@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'travel app/css/card.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+
+
+ 
+<body>
+  <h1>confirm your order</h1>
+<!-- booking_detail.html -->
+<div class="card">
+
+  <div class="card-body"style="width:400px ;">
+    <h5 class="card-title">booking Detail</h5>
+    {% for booking in book %}
+
+    <p class="card-text">Booking for {{booking.user}} at {{booking.package.pname}}</p>
+    {% if booking.confirm == True %}
+    
+       <button type="submit">Order Confirmed!!</button>
+    
+    {% else %} 
+
+    <a href='/con/{{booking.id}}' class="btn btn-primary">Confirm Order</a>
+  </div>
+</div>
+{% endif%}
+{%endfor%}
+  </body>
+  </html>
+   
